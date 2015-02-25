@@ -1,0 +1,229 @@
+<head>
+<base target="_parent" />
+<style>
+.getimg td
+{
+/*padding:10px;*/
+}
+.collapse {
+    border-collapse: collapse;
+}
+td{
+position:static;}
+.sss
+{
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+
+}
+.ss{
+
+	display: inline-block;
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	transition: all 10.8s;
+	-webkit-transition: all 10.8s;
+	-moz-transition: all 10.8s;
+}
+.l1,.l2,.l3,.l4,.l5,.l6,.l7  {
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+
+.l1:hover,.l2:hover,.l3:hover,.l4:hover,.l5:hover,.l6:hover,.l7:hover   {
+    -webkit-transform:scale(1.05); /* Safari and Chrome */
+    -moz-transform:scale(1.05); /* Firefox */
+    -ms-transform:scale(1.05); /* IE 9 */
+    -o-transform:scale(1.05); /* Opera */
+     transform:scale(1.05);
+}
+.getimg .l4 {
+    text-align: right;
+	
+}
+.getimg .l6 {
+    text-align: right;
+	
+}
+.getimg .l5,.getimg .l4 {
+    text-align: right;
+	
+}
+.getimg td {
+    text-align: center;
+     vertical-align: top;
+}
+.l1{
+max-width:100px;
+}
+.l2{
+max-width:110px;
+}
+.l3{
+max-width:140px;
+}
+.l4{
+max-width:100px;
+}
+.l5 {
+max-width:140px;
+}
+.l6 {
+max-width:110px;
+}
+.l7{
+max-width:110px;
+}
+</style>
+</head>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script></script>
+<script>
+var color="1px solid #666";
+var color2="1px solid #ccc";
+var loc=""
+var img="img#f1"
+var src="src"
+var href="wp-content/themes/dt-the7/images/logos/bg"
+var fhref=""
+var getclass=".l"
+function show_t1(results)
+{
+var getclass=".l"
+fhref=href.concat(results+".png");
+getclass=getclass.concat(results);
+$(img).attr(src, fhref);
+ //$("#f1").addClass('sss');
+// $("#f1").addClass('ss');
+/*/alert(results.length);
+$( results[0] ).css( "border", color );
+	for(i=1;i<results.length;i=i+2)
+	{
+		if (results[i+1]=="rt"){loc="border-right"}
+		if (results[i+1]=="bm"){loc="border-bottom"}
+		if (results[i+1]=="lt"){loc="border-left"}
+		if (results[i+1]=="tp"){loc="border-top"}
+		$( results[i] ).css( loc, color );
+		//alert(results[i]);
+	}*/
+
+}
+function hide_t1(results)
+{
+var getclass=".l"
+fhref=href.concat("f.png");
+$(img).attr(src, fhref);
+getclass=getclass.concat(results);
+ //$(getclass).addClass('transition-out');
+
+}
+
+//hide_t1([".t1","rt",".s2","bm",".s2","rt",".s2","rt",".s3","bm",".t3","rt",".s2","rt",".s3","bm",".s4","bm",".s5","bm",".t5","rt",".s7","rt",".t7","rt",".s10","bm",".s11","bm",".s12","bm",".s12","rt",".t9","rt",".s12","bm",".s12","rt",".t11","rt",".s13","bm",".s12","rt",".t13","rt"]);
+
+
+$(function() {
+$('.l1').hover(function() { 
+	show_t1("1");
+	//show_t1([".l1",".t1","rt",".s2","bm",".s2","rt"]);
+}, function() { 
+	hide_t1("1");
+	//hide_t1([".l1",".t1","rt",".s2","bm",".s2","rt"]);
+});
+$('.l2').hover(function() { 
+	show_t1("2");
+	//show_t1([".l2",".s2","rt",".s3","bm",".t3","rt"]);
+}, function() { 
+	hide_t1("2");
+	//hide_t1([".l2",".s2","rt",".s3","bm",".t3","rt"]);
+});
+$('.l3').hover(function() { 
+	show_t1("3");
+	//show_t1([".l3",".s2","rt",".s3","bm",".s4","bm",".s5","bm",".t5","rt"]);
+}, function() { 
+	hide_t1("3");
+	//hide_t1([".l3",".s2","rt",".s3","bm",".s4","bm",".s5","bm",".t5","rt"]);
+});
+$('.l4').hover(function() { 
+	show_t1("4");
+	//show_t1([".l4",".s7","rt",".t7","rt"]);
+}, function() { 
+	hide_t1("4");
+	//hide_t1([".l4",".s7","rt",".t7","rt"]);
+});
+
+$('.l5').hover(function() { 
+	show_t1("5");
+	//show_t1([".l5",".s10","bm",".s11","bm",".s12","bm",".s12","rt",".t9","rt"]);
+}, function() { 
+	hide_t1("5");
+	//hide_t1([".l5",".s10","bm",".s11","bm",".s12","bm",".s12","rt",".t9","rt"]);
+});
+$('.l6').hover(function() { 
+	show_t1("6");
+	
+	//show_t1([".l6",".s12","bm",".s12","rt",".t11","rt"]);
+}, function() { 
+	hide_t1("6");
+	//hide_t1([".l6",".s12","bm",".s12","rt",".t11","rt"]);
+});
+$('.l7').hover(function() { 
+	show_t1("7");
+	//show_t1([".l7",".s13","bm",".s12","rt",".t13","rt"]);
+}, function() { 
+	hide_t1("7");
+	//hide_t1([".l7",".s13","bm",".s12","rt",".t13","rt"]);
+});
+
+
+
+
+});
+//alert('jh');
+</script>
+
+
+
+<table class="collapse" border="0" style="width:400px;border-spacing: 0px;" onload="myFunction()">
+
+  <tr  height="40">
+    <td class="f1"  colspan="14"><img id="f1" style="padding-top:20px" height="142" width="1200"src="wp-content/themes/dt-the7/images/logos/bgf.png"></td>
+	<!--<td class="f2"></td>
+	<td class="f3"></td>
+	<td class="f4"></td>
+	<td class="f5"></td>
+	<td class="f6"></td>
+	<td class="f7"></td>
+	<td class="f8"></td>
+	<td class="f9"></td>
+	<td class="f10"></td>
+	<td class="f11"></td>
+	<td class="f12"></td>
+	<td class="f13"></td>
+	<td class="f14"></td>-->
+
+  </tr>
+  
+  <tr class="getimg">
+    <td class="l1" colspan="2"><a href="http://sasvat.co.in/?page_id=744"><img  src="wp-content/uploads/2014/12/logo1-300x157.jpg" height="100" width="140"></a></td>
+    <td class="l2"colspan="2"><a href="http://sasvat.co.in/?page_id=746"><img class="alignnone size-full wp-image-639" src="wp-content/uploads/2014/12/l2-300x1572.jpg" height="80" width="140"></a></td>		
+    <td class="l3"colspan="2"><a href="http://sasvat.co.in/?page_id=745"><img class="alignnone size-full wp-image-638" src="wp-content/uploads/2014/12/l3-300x1431.jpg" height="80" width="160"></a></td>
+	 <td class="l4"colspan="2"    onMouseOut="hide_all()">
+<a href="http://sasvat.co.in/?page_id=748"><img class="alignnone size-full wp-image-628" src="wp-content/uploads/2014/12/l7-300x1341.jpg"  height="80"  width="120"></a></td>
+    <td class="l5"colspan="2">
+<a href="http://sasvat.co.in/?page_id=751"><img class="alignnone size-full wp-image-639" src="wp-content/uploads/2014/12/l5-300x1382-e1419405579634.jpg"  height="80"width="140"></a></td>		
+    <td class="l6"colspan="2"><a href="http://sasvat.co.in/?page_id=752"><img class="alignnone size-full wp-image-638" src="wp-content/uploads/2014/12/l4.jpg"  height="80" width="120" ></a></td>
+	<td class="l7"colspan="2"><a href="http://sasvat.co.in/?page_id=803"><img class="alignnone size-full wp-image-638" src="wp-content/uploads/2014/12/l6-300x1172-e1419405569946.jpg"  height="80"width="120"></a></td>
+	
+  </tr>
+  
+</table>
+
+<div id = "Details" style="display: none;">
+5555
+</div>
